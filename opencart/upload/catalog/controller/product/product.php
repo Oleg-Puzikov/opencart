@@ -21,6 +21,9 @@ class Product extends \Opencart\System\Engine\Controller {
 		}
 
 		$this->load->model('catalog/product');
+		$this->load->model('catalog/review');
+		$data['review_count'] = $this->model_catalog_review->getTotalReviews($this->request->get['product_id']);
+
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
