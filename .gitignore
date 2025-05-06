@@ -1,0 +1,42 @@
+# Node / NPM / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.env
+.env.*
+docker-compose.override.yml
+*.pid
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OpenCart cache / storage
+opencart/upload/system/storage/cache/
+opencart/upload/system/storage/logs/
+opencart/upload/system/storage/modification/
+opencart/upload/system/storage/session/
+opencart/upload/system/storage/upload/
+
+# OpenCart config files (чувствительные)
+opencart/upload/config.php
+opencart/upload/admin/config.php
+
+# Composer (если используется)
+vendor/
+composer.lock
+
+# Backup files
+*.bak
+*.sql
+*.zip
