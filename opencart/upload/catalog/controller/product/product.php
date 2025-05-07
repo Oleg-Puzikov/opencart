@@ -19,10 +19,14 @@ class Product extends \Opencart\System\Engine\Controller {
 		} else {
 			$product_id = 0;
 		}
-
+		
+		$product_id = (int)$this->request->get['product_id'];
 		$this->load->model('catalog/product');
+		
 		$this->load->model('catalog/review');
-		$data['review_count'] = $this->model_catalog_review->getTotalReviews($this->request->get['product_id']);
+		$data['review_count'] = $this->model_catalog_review->getTotalReviewsByProductId($product_id);
+		$review_count = $this->model_catalog_review->getTotalReviewsByProductId($product_id);
+
 
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
